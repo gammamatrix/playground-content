@@ -1,38 +1,38 @@
-# Playground Content
+# Playground Http
 
-[![Playground CI Workflow](https://github.com/gammamatrix/playground-content/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-content/testing/develop/testdox.txt)
-[![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-content/testing/develop/coverage.svg)](tests)
+[![Playground CI Workflow](https://github.com/gammamatrix/playground-http/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-http/testing/develop/testdox.txt)
+[![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-http/testing/develop/coverage.svg)](tests)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-level%209-brightgreen)](.github/workflows/ci.yml#L120)
 
-The Playground Content package for [Laravel](https://laravel.com/docs/10.x) applications.
+The Playground Http package for [Laravel](https://laravel.com/docs/10.x) applications.
 
-More information is available [on the Playground Content wiki.](https://github.com/gammamatrix/playground-content/wiki)
+More information is available [on the Playground Http wiki.](https://github.com/gammamatrix/playground-http/wiki)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require gammamatrix/playground-content
+composer require gammamatrix/playground-http
 ```
 
-**NOTE:** This package is required by [Playground: Login Blade](https://github.com/gammamatrix/playground-login-blade)
+**NOTE:** This package is required by [Playground: Http](https://github.com/gammamatrix/playground-login-blade)
 
 ## `artisan about`
 
-Playground Content provides information in the `artisan about` command.
+Playground Http provides information in the `artisan about` command.
 
-<img src="resources/docs/artisan-about-playground-content.png" alt="screenshot of artisan about command with Playground Content.">
+<img src="resources/docs/artisan-about-playground-http.png" alt="screenshot of artisan about command with Playground Http.">
 
 
 ## Configuration
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Playground\Content\ServiceProvider" --tag="playground-config"
+php artisan vendor:publish --provider="Playground\Http\ServiceProvider" --tag="playground-config"
 ```
 
-See the contents of the published config file: [config/playground-content.php](config/playground-content.php)
+See the contents of the published config file: [config/playground-http.php](config/playground-http.php)
 
 ### Environment Variables
 

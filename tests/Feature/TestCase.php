@@ -2,13 +2,13 @@
 /**
  * Playground
  */
-namespace Tests\Feature\Playground\Content;
+namespace Tests\Feature\Playground\Http;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Tests\Unit\Playground\Content\TestCase as BaseTestCase;
+use Tests\Unit\Playground\Http\TestCase as BaseTestCase;
 
 /**
- * \Tests\Feature\Playground\Content\TestCase
+ * \Tests\Feature\Playground\Http\TestCase
  */
 class TestCase extends BaseTestCase
 {

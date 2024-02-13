@@ -2,14 +2,14 @@
 /**
  * Playground
  */
-namespace Tests\Unit\Playground\Content;
+namespace Tests\Unit\Playground\Http;
 
-use Playground\Content\ServiceProvider;
+use Playground\Http\ServiceProvider;
 // use Playground\ServiceProvider as PlaygroundServiceProvider;
 use Playground\Test\OrchestraTestCase;
 
 /**
- * \Tests\Unit\Playground\Content\TestCase
+ * \Tests\Unit\Playground\Http\TestCase
  */
 class TestCase extends OrchestraTestCase
 {
@@ -32,8 +32,8 @@ class TestCase extends OrchestraTestCase
         $app['config']->set('auth.providers.users.model', 'Playground\\Test\\Models\\User');
         $app['config']->set('playground.auth.verify', 'user');
 
-        // $app['config']->set('playground-content.redirect', true);
-        // $app['config']->set('playground-content.session', true);
+        // $app['config']->set('playground-http.redirect', true);
+        // $app['config']->set('playground-http.session', true);
 
     }
 }

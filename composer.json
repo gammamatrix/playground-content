@@ -1,13 +1,13 @@
 {
-    "name": "gammamatrix/playground-content",
-    "description": "Playground: Provide content handling for controllers.",
+    "name": "gammamatrix/playground-http",
+    "description": "Playground: Provide Http content and filter handling for controllers.",
     "keywords": [
         "gammamatrix",
         "laravel",
         "playground",
-        "playground-content"
+        "playground-http"
     ],
-    "homepage": "https://github.com/gammamatrix/playground-content/wiki",
+    "homepage": "https://github.com/gammamatrix/playground-http/wiki",
     "license": "MIT",
     "authors": [
         {
@@ -27,13 +27,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Playground\\Content\\": "src/"
+            "Playground\\Http\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Feature\\Playground\\Content\\": "tests/Feature/",
-            "Tests\\Unit\\Playground\\Content\\": "tests/Unit/"
+            "Tests\\Feature\\Playground\\Http\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Http\\": "tests/Unit/"
         }
     },
     "config": {
@@ -50,7 +50,7 @@
         },
         "laravel": {
             "providers": [
-                "Playground\\Content\\ServiceProvider"
+                "Playground\\Http\\ServiceProvider"
             ]
         }
     },

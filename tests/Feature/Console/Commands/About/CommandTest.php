@@ -4,14 +4,14 @@
  */
 
 declare(strict_types=1);
-namespace Tests\Feature\Playground\Content\Console\Commands\About;
+namespace Tests\Feature\Playground\Http\Console\Commands\About;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use Playground\Test\ServiceProvider;
-use Tests\Feature\Playground\Content\TestCase;
+use Tests\Feature\Playground\Http\TestCase;
 
 /**
- * \Tests\Feature\Playground\Content\Console\Commands\About
+ * \Tests\Feature\Playground\Http\Console\Commands\About
  */
 #[CoversClass(ServiceProvider::class)]
 class CommandTest extends TestCase

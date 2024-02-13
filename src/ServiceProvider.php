@@ -2,19 +2,19 @@
 /**
  * Playground
  */
-namespace Playground\Content;
+namespace Playground\Http;
 
 use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider;
 
 /**
- * \Playground\Content\ServiceProvider
+ * \Playground\Http\ServiceProvider
  */
 class ServiceProvider extends AuthServiceProvider
 {
     public const VERSION = '73.0.0';
 
-    protected string $package = 'playground-content';
+    protected string $package = 'playground-http';
 
     /**
      * Bootstrap any package services.
@@ -30,6 +30,13 @@ class ServiceProvider extends AuthServiceProvider
         $config = config($this->package);
 
         if (! empty($config['load']) && is_array($config['load'])) {
+
+            if (! empty($config['load']['translations'])) {
+                $this->loadTranslationsFrom(
+                    dirname(__DIR__).'/lang',
+                    'playground-http'
+                );
+            }
 
             if ($this->app->runningInConsole()) {
                 // Publish configuration
@@ -63,7 +70,6 @@ class ServiceProvider extends AuthServiceProvider
         $version = $this->version();
 
         AboutCommand::add('Playground: Content', fn () => [
-            '<fg=yellow;options=bold>Load</> Commands' => ! empty($load['commands']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=yellow;options=bold>Load</> Translations' => ! empty($load['translations']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
 
             'Package' => $this->package,
