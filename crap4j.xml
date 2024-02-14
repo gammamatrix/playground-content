@@ -1,30 +1,580 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-13 21:27:11</timestamp>
+  <timestamp>2024-02-14 00:00:15</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>4</methodCount>
-    <crapMethodCount>0</crapMethodCount>
-    <crapLoad>0</crapLoad>
-    <totalCrap>66</totalCrap>
-    <crapMethodPercent>0</crapMethodPercent>
+    <methodCount>54</methodCount>
+    <crapMethodCount>7</crapMethodCount>
+    <crapLoad>105</crapLoad>
+    <totalCrap>2282</totalCrap>
+    <crapMethodPercent>12.96</crapMethodPercent>
   </stats>
   <methods>
     <method>
-      <package>Playground\Content</package>
-      <className>Playground\Content\ServiceProvider</className>
-      <methodName>boot</methodName>
-      <methodSignature>boot()</methodSignature>
-      <fullMethod>boot()</fullMethod>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationColumns</className>
+      <methodName>getPaginationColumns</methodName>
+      <methodSignature>getPaginationColumns(): array</methodSignature>
+      <fullMethod>getPaginationColumns(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationColumns</className>
+      <methodName>rules_filters_columns</methodName>
+      <methodSignature>rules_filters_columns(array $rules): void</methodSignature>
+      <fullMethod>rules_filters_columns(array $rules): void</fullMethod>
+      <crap>240</crap>
+      <complexity>15</complexity>
+      <coverage>0</coverage>
+      <crapLoad>15</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationDates</className>
+      <methodName>getPaginationDates</methodName>
+      <methodSignature>getPaginationDates(): array</methodSignature>
+      <fullMethod>getPaginationDates(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationDates</className>
+      <methodName>rules_filters_dates</methodName>
+      <methodSignature>rules_filters_dates(array $rules): void</methodSignature>
+      <fullMethod>rules_filters_dates(array $rules): void</fullMethod>
       <crap>20</crap>
       <complexity>4</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Playground\Content</package>
-      <className>Playground\Content\ServiceProvider</className>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationDates</className>
+      <methodName>prepareForValidationForDates</methodName>
+      <methodSignature>prepareForValidationForDates(): ?array</methodSignature>
+      <fullMethod>prepareForValidationForDates(): ?array</fullMethod>
+      <crap>420</crap>
+      <complexity>20</complexity>
+      <coverage>0</coverage>
+      <crapLoad>20</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationFlags</className>
+      <methodName>getPaginationFlags</methodName>
+      <methodSignature>getPaginationFlags(): array</methodSignature>
+      <fullMethod>getPaginationFlags(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationFlags</className>
+      <methodName>rules_filters_flags</methodName>
+      <methodSignature>rules_filters_flags(array $rules): void</methodSignature>
+      <fullMethod>rules_filters_flags(array $rules): void</fullMethod>
+      <crap>72</crap>
+      <complexity>8</complexity>
+      <coverage>0</coverage>
+      <crapLoad>8</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationIds</className>
+      <methodName>getPaginationIds</methodName>
+      <methodSignature>getPaginationIds(): array</methodSignature>
+      <fullMethod>getPaginationIds(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationIds</className>
+      <methodName>rules_filters_ids</methodName>
+      <methodSignature>rules_filters_ids(array $rules): void</methodSignature>
+      <fullMethod>rules_filters_ids(array $rules): void</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationIds</className>
+      <methodName>prepareForValidationIds</methodName>
+      <methodSignature>prepareForValidationIds(): array</methodSignature>
+      <fullMethod>prepareForValidationIds(): array</fullMethod>
+      <crap>380</crap>
+      <complexity>19</complexity>
+      <coverage>0</coverage>
+      <crapLoad>19</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationOperators</className>
+      <methodName>getPaginationOperators</methodName>
+      <methodSignature>getPaginationOperators(): array</methodSignature>
+      <fullMethod>getPaginationOperators(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationSortable</className>
+      <methodName>getSortable</methodName>
+      <methodSignature>getSortable(): array</methodSignature>
+      <fullMethod>getSortable(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationSortable</className>
+      <methodName>rules_sortable</methodName>
+      <methodSignature>rules_sortable(array $rules): void</methodSignature>
+      <fullMethod>rules_sortable(array $rules): void</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\PaginationSortable</className>
+      <methodName>prepareForValidationSort</methodName>
+      <methodSignature>prepareForValidationSort(): array</methodSignature>
+      <fullMethod>prepareForValidationSort(): array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreContent</className>
+      <methodName>exorcise</methodName>
+      <methodSignature>exorcise(mixed $content): string</methodSignature>
+      <fullMethod>exorcise(mixed $content): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreContent</className>
+      <methodName>purify</methodName>
+      <methodSignature>purify(mixed $content): string</methodSignature>
+      <fullMethod>purify(mixed $content): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreContent</className>
+      <methodName>getHtmlPurifier</methodName>
+      <methodSignature>getHtmlPurifier(array $config): HTMLPurifier</methodSignature>
+      <fullMethod>getHtmlPurifier(array $config): HTMLPurifier</fullMethod>
+      <crap>210</crap>
+      <complexity>14</complexity>
+      <coverage>0</coverage>
+      <crapLoad>14</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterArray</methodName>
+      <methodSignature>filterArray(mixed $value): array</methodSignature>
+      <fullMethod>filterArray(mixed $value): array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterArrayToJson</methodName>
+      <methodSignature>filterArrayToJson(mixed $value): string|false</methodSignature>
+      <fullMethod>filterArrayToJson(mixed $value): string|false</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterBits</methodName>
+      <methodSignature>filterBits($value, $exponent): int</methodSignature>
+      <fullMethod>filterBits($value, $exponent): int</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterBoolean</methodName>
+      <methodSignature>filterBoolean(mixed $value): bool</methodSignature>
+      <fullMethod>filterBoolean(mixed $value): bool</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterDate</methodName>
+      <methodSignature>filterDate(mixed $value, $locale): ?string</methodSignature>
+      <fullMethod>filterDate(mixed $value, $locale): ?string</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterDateAsCarbon</methodName>
+      <methodSignature>filterDateAsCarbon($value, $locale): ?Carbon\Carbon</methodSignature>
+      <fullMethod>filterDateAsCarbon($value, $locale): ?Carbon\Carbon</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterEmail</methodName>
+      <methodSignature>filterEmail(mixed $email): string</methodSignature>
+      <fullMethod>filterEmail(mixed $email): string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterFloat</methodName>
+      <methodSignature>filterFloat(mixed $value, $locale): ?float</methodSignature>
+      <fullMethod>filterFloat(mixed $value, $locale): ?float</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterHtml</methodName>
+      <methodSignature>filterHtml(string $content): string</methodSignature>
+      <fullMethod>filterHtml(string $content): string</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterInteger</methodName>
+      <methodSignature>filterInteger(mixed $value, $locale): int</methodSignature>
+      <fullMethod>filterInteger(mixed $value, $locale): int</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterIntegerId</methodName>
+      <methodSignature>filterIntegerId(mixed $value): ?int</methodSignature>
+      <fullMethod>filterIntegerId(mixed $value): ?int</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterIntegerPositive</methodName>
+      <methodSignature>filterIntegerPositive(mixed $value, $absolute): int</methodSignature>
+      <fullMethod>filterIntegerPositive(mixed $value, $absolute): int</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterPercent</methodName>
+      <methodSignature>filterPercent(mixed $value, $locale): ?float</methodSignature>
+      <fullMethod>filterPercent(mixed $value, $locale): ?float</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterPhone</methodName>
+      <methodSignature>filterPhone(mixed $value, string $locale): string</methodSignature>
+      <fullMethod>filterPhone(mixed $value, string $locale): string</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterStatus</methodName>
+      <methodSignature>filterStatus(array $input): array</methodSignature>
+      <fullMethod>filterStatus(array $input): array</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterSystemFields</methodName>
+      <methodSignature>filterSystemFields(array $input): array</methodSignature>
+      <fullMethod>filterSystemFields(array $input): array</fullMethod>
+      <crap>182</crap>
+      <complexity>13</complexity>
+      <coverage>0</coverage>
+      <crapLoad>13</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterUuid</methodName>
+      <methodSignature>filterUuid(mixed $value): ?string</methodSignature>
+      <fullMethod>filterUuid(mixed $value): ?string</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreSlug</className>
+      <methodName>rules_store_slug_create</methodName>
+      <methodSignature>rules_store_slug_create(array $rules): void</methodSignature>
+      <fullMethod>rules_store_slug_create(array $rules): void</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreSlug</className>
+      <methodName>rules_store_slug_update</methodName>
+      <methodSignature>rules_store_slug_update(array $rules): void</methodSignature>
+      <fullMethod>rules_store_slug_update(array $rules): void</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreSlug</className>
+      <methodName>prepareForValidationForSlug</methodName>
+      <methodSignature>prepareForValidationForSlug(): array</methodSignature>
+      <fullMethod>prepareForValidationForSlug(): array</fullMethod>
+      <crap>210</crap>
+      <complexity>14</complexity>
+      <coverage>0</coverage>
+      <crapLoad>14</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\FormRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize(): bool</methodSignature>
+      <fullMethod>authorize(): bool</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\FormRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\IndexRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\IndexRequest</className>
+      <methodName>rules_filters</methodName>
+      <methodSignature>rules_filters(array $rules): void</methodSignature>
+      <fullMethod>rules_filters(array $rules): void</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\IndexRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation(): void</methodSignature>
+      <fullMethod>prepareForValidation(): void</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\IndexRequest</className>
+      <methodName>passedValidation</methodName>
+      <methodSignature>passedValidation()</methodSignature>
+      <fullMethod>passedValidation()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\IndexRequest</className>
+      <methodName>prepareForValidationPagination</methodName>
+      <methodSignature>prepareForValidationPagination(): array</methodSignature>
+      <fullMethod>prepareForValidationPagination(): array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\StoreRequest</className>
+      <methodName>messages</methodName>
+      <methodSignature>messages(): array</methodSignature>
+      <fullMethod>messages(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\StoreRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\StoreRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation()</methodSignature>
+      <fullMethod>prepareForValidation()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\UpdateRequest</className>
+      <methodName>messages</methodName>
+      <methodSignature>messages(): array</methodSignature>
+      <fullMethod>messages(): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\UpdateRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules(): array</methodSignature>
+      <fullMethod>rules(): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests</package>
+      <className>Playground\Http\Requests\UpdateRequest</className>
+      <methodName>prepareForValidation</methodName>
+      <methodSignature>prepareForValidation()</methodSignature>
+      <fullMethod>prepareForValidation()</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http</package>
+      <className>Playground\Http\ServiceProvider</className>
+      <methodName>boot</methodName>
+      <methodSignature>boot()</methodSignature>
+      <fullMethod>boot()</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http</package>
+      <className>Playground\Http\ServiceProvider</className>
       <methodName>register</methodName>
       <methodSignature>register(): void</methodSignature>
       <fullMethod>register(): void</fullMethod>
@@ -34,19 +584,19 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Playground\Content</package>
-      <className>Playground\Content\ServiceProvider</className>
+      <package>Playground\Http</package>
+      <className>Playground\Http\ServiceProvider</className>
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>Playground\Content</package>
-      <className>Playground\Content\ServiceProvider</className>
+      <package>Playground\Http</package>
+      <className>Playground\Http\ServiceProvider</className>
       <methodName>version</methodName>
       <methodSignature>version(): string</methodSignature>
       <fullMethod>version(): string</fullMethod>
