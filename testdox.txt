@@ -1,3 +1,49 @@
+Array Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ArrayTrait)
+ [x] Filter array
+ [x] FilterArray to json
+
+Bits Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\BitsTrait)
+ [x] FilterBits for exponent zero
+ [x] FilterBits for exponent greater than zero
+
 Command (Tests\Feature\Playground\Http\Console\Commands\About\Command)
  [x] Command about displays package information and succeed with code 0
+
+Date Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\DateTrait)
+ [x] Filter date
+ [x] Filter date as carbon
+
+Number Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTrait)
+ [x] Filter float
+ [x] Filter integer
+ [x] Filter integer id
+ [x] Filter integer positive
+ [x] Filter percent
+
+Phone Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\PhoneTrait)
+ [x] Filter phone
+
+Status Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\StatusTrait)
+ [x] Filter status
+
+System Fields Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTrait)
+ [x] FilterSystemFields for groups
+ [x] FilterSystemFields for permissions
+ [x] FilterSystemFields for rank
+ [x] FilterSystemFields for size
+
+Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\Trait)
+ [x] Purify
+ [x] Exorcise
+ [x] Get html purifier
+ [x] GetHtmlPurifier with iframes
+ [x] GetHtmlPurifier with purifier path
+
+Uuid Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\UuidTrait)
+ [x] Filter uuid
+
+Value Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ValueTrait)
+ [x] Filter boolean
+ [x] Filter email
+ [x] Filter html
 

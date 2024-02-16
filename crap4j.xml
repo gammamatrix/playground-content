@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-14 00:00:15</timestamp>
+  <timestamp>2024-02-16 23:02:54</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>54</methodCount>
-    <crapMethodCount>7</crapMethodCount>
-    <crapLoad>105</crapLoad>
-    <totalCrap>2282</totalCrap>
-    <crapMethodPercent>12.96</crapMethodPercent>
+    <crapMethodCount>5</crapMethodCount>
+    <crapLoad>78</crapLoad>
+    <totalCrap>1626</totalCrap>
+    <crapMethodPercent>9.26</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -171,9 +171,9 @@
       <methodName>exorcise</methodName>
       <methodSignature>exorcise(mixed $content): string</methodSignature>
       <fullMethod>exorcise(mixed $content): string</fullMethod>
-      <crap>6</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -182,9 +182,9 @@
       <methodName>purify</methodName>
       <methodSignature>purify(mixed $content): string</methodSignature>
       <fullMethod>purify(mixed $content): string</fullMethod>
-      <crap>6</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -193,10 +193,10 @@
       <methodName>getHtmlPurifier</methodName>
       <methodSignature>getHtmlPurifier(array $config): HTMLPurifier</methodSignature>
       <fullMethod>getHtmlPurifier(array $config): HTMLPurifier</fullMethod>
-      <crap>210</crap>
-      <complexity>14</complexity>
-      <coverage>0</coverage>
-      <crapLoad>14</crapLoad>
+      <crap>13</crap>
+      <complexity>13</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
@@ -204,9 +204,9 @@
       <methodName>filterArray</methodName>
       <methodSignature>filterArray(mixed $value): array</methodSignature>
       <fullMethod>filterArray(mixed $value): array</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -215,9 +215,9 @@
       <methodName>filterArrayToJson</methodName>
       <methodSignature>filterArrayToJson(mixed $value): string|false</methodSignature>
       <fullMethod>filterArrayToJson(mixed $value): string|false</fullMethod>
-      <crap>12</crap>
+      <crap>3</crap>
       <complexity>3</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -226,9 +226,9 @@
       <methodName>filterBits</methodName>
       <methodSignature>filterBits($value, $exponent): int</methodSignature>
       <fullMethod>filterBits($value, $exponent): int</fullMethod>
-      <crap>6</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -237,9 +237,9 @@
       <methodName>filterBoolean</methodName>
       <methodSignature>filterBoolean(mixed $value): bool</methodSignature>
       <fullMethod>filterBoolean(mixed $value): bool</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -248,20 +248,20 @@
       <methodName>filterDate</methodName>
       <methodSignature>filterDate(mixed $value, $locale): ?string</methodSignature>
       <fullMethod>filterDate(mixed $value, $locale): ?string</fullMethod>
-      <crap>42</crap>
+      <crap>6</crap>
       <complexity>6</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
       <className>Playground\Http\Requests\Concerns\StoreFilter</className>
       <methodName>filterDateAsCarbon</methodName>
-      <methodSignature>filterDateAsCarbon($value, $locale): ?Carbon\Carbon</methodSignature>
-      <fullMethod>filterDateAsCarbon($value, $locale): ?Carbon\Carbon</fullMethod>
-      <crap>6</crap>
+      <methodSignature>filterDateAsCarbon($value, $locale): ?Illuminate\Support\Carbon</methodSignature>
+      <fullMethod>filterDateAsCarbon($value, $locale): ?Illuminate\Support\Carbon</fullMethod>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -270,9 +270,9 @@
       <methodName>filterEmail</methodName>
       <methodSignature>filterEmail(mixed $email): string</methodSignature>
       <fullMethod>filterEmail(mixed $email): string</fullMethod>
-      <crap>12</crap>
+      <crap>3</crap>
       <complexity>3</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -281,9 +281,9 @@
       <methodName>filterFloat</methodName>
       <methodSignature>filterFloat(mixed $value, $locale): ?float</methodSignature>
       <fullMethod>filterFloat(mixed $value, $locale): ?float</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -292,9 +292,9 @@
       <methodName>filterHtml</methodName>
       <methodSignature>filterHtml(string $content): string</methodSignature>
       <fullMethod>filterHtml(string $content): string</fullMethod>
-      <crap>6</crap>
+      <crap>2</crap>
       <complexity>2</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -303,9 +303,9 @@
       <methodName>filterInteger</methodName>
       <methodSignature>filterInteger(mixed $value, $locale): int</methodSignature>
       <fullMethod>filterInteger(mixed $value, $locale): int</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -314,9 +314,9 @@
       <methodName>filterIntegerId</methodName>
       <methodSignature>filterIntegerId(mixed $value): ?int</methodSignature>
       <fullMethod>filterIntegerId(mixed $value): ?int</fullMethod>
-      <crap>12</crap>
+      <crap>3</crap>
       <complexity>3</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -325,9 +325,9 @@
       <methodName>filterIntegerPositive</methodName>
       <methodSignature>filterIntegerPositive(mixed $value, $absolute): int</methodSignature>
       <fullMethod>filterIntegerPositive(mixed $value, $absolute): int</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -336,9 +336,9 @@
       <methodName>filterPercent</methodName>
       <methodSignature>filterPercent(mixed $value, $locale): ?float</methodSignature>
       <fullMethod>filterPercent(mixed $value, $locale): ?float</fullMethod>
-      <crap>20</crap>
+      <crap>4</crap>
       <complexity>4</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -347,9 +347,9 @@
       <methodName>filterPhone</methodName>
       <methodSignature>filterPhone(mixed $value, string $locale): string</methodSignature>
       <fullMethod>filterPhone(mixed $value, string $locale): string</fullMethod>
-      <crap>30</crap>
+      <crap>5</crap>
       <complexity>5</complexity>
-      <coverage>0</coverage>
+      <coverage>97.56</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -358,9 +358,9 @@
       <methodName>filterStatus</methodName>
       <methodSignature>filterStatus(array $input): array</methodSignature>
       <fullMethod>filterStatus(array $input): array</fullMethod>
-      <crap>30</crap>
+      <crap>5</crap>
       <complexity>5</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -369,10 +369,10 @@
       <methodName>filterSystemFields</methodName>
       <methodSignature>filterSystemFields(array $input): array</methodSignature>
       <fullMethod>filterSystemFields(array $input): array</fullMethod>
-      <crap>182</crap>
+      <crap>13</crap>
       <complexity>13</complexity>
-      <coverage>0</coverage>
-      <crapLoad>13</crapLoad>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
@@ -380,9 +380,9 @@
       <methodName>filterUuid</methodName>
       <methodSignature>filterUuid(mixed $value): ?string</methodSignature>
       <fullMethod>filterUuid(mixed $value): ?string</fullMethod>
-      <crap>12</crap>
+      <crap>3</crap>
       <complexity>3</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -567,9 +567,9 @@
       <methodName>boot</methodName>
       <methodSignature>boot()</methodSignature>
       <fullMethod>boot()</fullMethod>
-      <crap>30</crap>
+      <crap>5</crap>
       <complexity>5</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -578,9 +578,9 @@
       <methodName>register</methodName>
       <methodSignature>register(): void</methodSignature>
       <fullMethod>register(): void</fullMethod>
-      <crap>2</crap>
+      <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -589,9 +589,9 @@
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>30</crap>
+      <crap>5</crap>
       <complexity>5</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -600,9 +600,9 @@
       <methodName>version</methodName>
       <methodSignature>version(): string</methodSignature>
       <fullMethod>version(): string</fullMethod>
-      <crap>2</crap>
+      <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>0</coverage>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
   </methods>
