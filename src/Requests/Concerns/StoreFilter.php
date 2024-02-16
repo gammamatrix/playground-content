@@ -4,7 +4,7 @@
  */
 namespace Playground\Http\Requests\Concerns;
 
-use Carbon\Carbon;
+use Illuminate\Support\Carbon;
 use Ramsey\Uuid\Uuid;
 
 /**
@@ -261,12 +261,42 @@ trait StoreFilter
         }
 
         if (is_string($value)) {
-            // Allow commas and pluses: +,
+            // Allow commas, pluses, pound: +,#
             $value = filter_var(str_replace([
                 '-',
                 '.',
                 '',
-            ], '', $value), FILTER_SANITIZE_NUMBER_INT);
+                '$',
+                '_',
+                '+',
+                '!',
+                '*',
+                '\'',
+                '(',
+                ')',
+                '{',
+                '}',
+                '|',
+                '\\',
+                '^',
+                '~',
+                '`',
+                '[',
+                ']',
+                '<',
+                '>',
+                '/',
+                '#',
+                '%',
+                '"',
+                ';',
+                '/',
+                '?',
+                ':',
+                '@',
+                '&',
+                '=',
+            ], '', $value), FILTER_SANITIZE_URL);
         }
 
         return is_string($value) ? $value : '';

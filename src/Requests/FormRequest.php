@@ -9,7 +9,7 @@ use Illuminate\Foundation\Http\FormRequest as BaseFormRequest;
 /**
  * \Playground\Http\Requests\FormRequest
  */
-abstract class FormRequest extends BaseFormRequest
+class FormRequest extends BaseFormRequest
 {
     /**
      * @var array<string, string|array<mixed>>

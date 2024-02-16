@@ -7,7 +7,7 @@ namespace Playground\Http\Requests;
 /**
  * \Playground\Http\Requests\StoreRequest
  */
-abstract class StoreRequest extends FormRequest implements Contracts\StoreContent, Contracts\StoreFilter, Contracts\StoreSlug
+class StoreRequest extends FormRequest implements Contracts\StoreContent, Contracts\StoreFilter, Contracts\StoreSlug
 {
     use Concerns\StoreContent;
     use Concerns\StoreFilter;
@@ -20,7 +20,7 @@ abstract class StoreRequest extends FormRequest implements Contracts\StoreConten
     {
         return [
             // 'slug.unique' => 'The :attribute has already been taken: :input',
-            'slug.unique' => __('playground::validation.slug.unique'),
+            'slug.unique' => __('playground-http::validation.slug.unique'),
         ];
     }
 
