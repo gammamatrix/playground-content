@@ -22,7 +22,7 @@ composer require gammamatrix/playground-http
 
 Playground Http provides information in the `artisan about` command.
 
-<img src="resources/docs/artisan-about-playground-http.png" alt="screenshot of artisan about command with Playground Http.">
+<!-- <img src="resources/docs/artisan-about-playground-http.png" alt="screenshot of artisan about command with Playground Http."> -->
 
 
 ## Configuration
