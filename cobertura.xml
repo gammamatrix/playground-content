@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.38515081206497" branch-rate="0" lines-covered="166" lines-valid="431" branches-covered="0" branches-valid="0" complexity="229" version="0.4" timestamp="1708124574">
+<coverage line-rate="0.38657407407407" branch-rate="0" lines-covered="167" lines-valid="432" branches-covered="0" branches-valid="0" complexity="231" version="0.4" timestamp="1708214533">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -1172,9 +1172,9 @@
         </class>
       </classes>
     </package>
-    <package name="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="12">
+    <package name="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="14">
       <classes>
-        <class name="Playground\Http\ServiceProvider" filename="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="12">
+        <class name="Playground\Http\ServiceProvider" filename="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="14">
           <methods>
             <method name="boot" signature="" line-rate="1" branch-rate="0" complexity="5">
               <lines>
@@ -1200,22 +1200,23 @@
                 <line number="60" hits="26"/>
               </lines>
             </method>
-            <method name="about" signature="" line-rate="1" branch-rate="0" complexity="5">
+            <method name="about" signature="" line-rate="1" branch-rate="0" complexity="7">
               <lines>
                 <line number="65" hits="26"/>
                 <line number="66" hits="26"/>
                 <line number="68" hits="26"/>
-                <line number="70" hits="26"/>
-                <line number="72" hits="26"/>
+                <line number="69" hits="26"/>
+                <line number="71" hits="26"/>
                 <line number="73" hits="26"/>
-                <line number="75" hits="26"/>
+                <line number="74" hits="26"/>
                 <line number="76" hits="26"/>
                 <line number="77" hits="26"/>
+                <line number="78" hits="26"/>
               </lines>
             </method>
             <method name="version" signature="" line-rate="1" branch-rate="0" complexity="1">
               <lines>
-                <line number="82" hits="26"/>
+                <line number="83" hits="26"/>
               </lines>
             </method>
           </methods>
@@ -1239,13 +1240,14 @@
             <line number="65" hits="26"/>
             <line number="66" hits="26"/>
             <line number="68" hits="26"/>
-            <line number="70" hits="26"/>
-            <line number="72" hits="26"/>
+            <line number="69" hits="26"/>
+            <line number="71" hits="26"/>
             <line number="73" hits="26"/>
-            <line number="75" hits="26"/>
+            <line number="74" hits="26"/>
             <line number="76" hits="26"/>
             <line number="77" hits="26"/>
-            <line number="82" hits="26"/>
+            <line number="78" hits="26"/>
+            <line number="83" hits="26"/>
           </lines>
         </class>
       </classes>
