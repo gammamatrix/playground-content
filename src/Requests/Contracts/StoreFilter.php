@@ -4,7 +4,7 @@
  */
 namespace Playground\Http\Requests\Contracts;
 
-use Carbon\Carbon;
+use Illuminate\Support\Carbon;
 use Ramsey\Uuid\Uuid;
 
 /**

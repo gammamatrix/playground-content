@@ -7,7 +7,7 @@ namespace Playground\Http\Requests;
 /**
  * \Playground\Http\Requests\IndexRequest
  */
-abstract class IndexRequest extends FormRequest implements Contracts\PaginationColumns, Contracts\PaginationDates, Contracts\PaginationFlags, Contracts\PaginationIds, Contracts\PaginationOperators, Contracts\PaginationSortable
+class IndexRequest extends FormRequest implements Contracts\PaginationColumns, Contracts\PaginationDates, Contracts\PaginationFlags, Contracts\PaginationIds, Contracts\PaginationOperators, Contracts\PaginationSortable
 {
     use Concerns\PaginationColumns;
     use Concerns\PaginationDates;

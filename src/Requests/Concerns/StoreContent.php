@@ -47,22 +47,25 @@ trait StoreContent
         if ($this->purifier === null) {
             $hpc = \HTMLPurifier_Config::createDefault();
 
-            $config = empty($config) ? config('playground-http') : $config;
+            /**
+             * @var array<string, string>
+             */
+            $purifier = empty($config) ? config('playground-http.purifier') : $config;
 
             $serializerPath = null;
 
-            if (is_array($config) && ! empty($config['purifier']) && is_array($config['purifier'])) {
+            if (is_array($purifier) && ! empty($purifier)) {
 
-                if (array_key_exists('iframes', $config['purifier'])
-                    && (is_null($config['purifier']['iframes']) || (is_string($config['purifier']['iframes']) && $config['purifier']['iframes']))
+                if (array_key_exists('iframes', $purifier)
+                    && (is_null($purifier['iframes']) || (is_string($purifier['iframes']) && $purifier['iframes']))
                 ) {
-                    $this->safeIframeRegexp = $config['purifier']['iframes'];
+                    $this->safeIframeRegexp = $purifier['iframes'];
                 }
 
-                if (! empty($config['purifier']['path'])
-                    && is_string($config['purifier']['path'])
+                if (! empty($purifier['path'])
+                    && is_string($purifier['path'])
                 ) {
-                    $serializerPath = $config['purifier']['path'];
+                    $serializerPath = $purifier['path'];
                 }
             }
 

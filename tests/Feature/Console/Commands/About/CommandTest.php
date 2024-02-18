@@ -23,6 +23,6 @@ class CommandTest extends TestCase
          */
         $result = $this->artisan('about');
         $result->assertExitCode(0);
-        $result->expectsOutputToContain('Playground: Content');
+        $result->expectsOutputToContain('Playground: Http');
     }
 }
