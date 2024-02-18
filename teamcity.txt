@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='test_purify' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_purify' flowId='1']
 
-##teamcity[testFinished name='test_purify' duration='246' flowId='1']
+##teamcity[testFinished name='test_purify' duration='239' flowId='1']
 
 ##teamcity[testStarted name='test_exorcise' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_exorcise' flowId='1']
 
@@ -79,7 +79,7 @@
 
 ##teamcity[testStarted name='test_filterIntegerPositive' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/NumberTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTraitTest::test_filterIntegerPositive' flowId='1']
 
-##teamcity[testFinished name='test_filterIntegerPositive' duration='5' flowId='1']
+##teamcity[testFinished name='test_filterIntegerPositive' duration='4' flowId='1']
 
 ##teamcity[testStarted name='test_filterPercent' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/NumberTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTraitTest::test_filterPercent' flowId='1']
 
@@ -143,7 +143,7 @@
 
 ##teamcity[testStarted name='test_filterHtml' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/ValueTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ValueTraitTest::test_filterHtml' flowId='1']
 
-##teamcity[testFinished name='test_filterHtml' duration='5' flowId='1']
+##teamcity[testFinished name='test_filterHtml' duration='4' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ValueTraitTest' flowId='1']
 
@@ -155,7 +155,7 @@
 
 ##teamcity[testStarted name='test_command_about_displays_package_information_and_succeed_with_code_0' locationHint='php_qn:///app/tests/Feature/Console/Commands/About/CommandTest.php::\Tests\Feature\Playground\Http\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0' flowId='1']
 
-##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='104' flowId='1']
+##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='103' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Feature\Playground\Http\Console\Commands\About\CommandTest' flowId='1']
 
