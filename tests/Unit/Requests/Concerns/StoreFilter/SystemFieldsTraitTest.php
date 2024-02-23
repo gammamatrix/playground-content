@@ -5,6 +5,7 @@
 namespace Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter;
 
 use Playground\Http\Requests\StoreRequest;
+use Playground\Test\MockingTrait;
 use Tests\Unit\Playground\Http\TestCase;
 
 /**
@@ -15,19 +16,40 @@ use Tests\Unit\Playground\Http\TestCase;
  */
 class SystemFieldsTraitTest extends TestCase
 {
+    use MockingTrait;
+
     /**
-     * filterSystemFields: gids
+     * @param array<string, mixed> $input
+     */
+    public function getStoreRequest(
+        array $input = [],
+        string $uri = '/testing',
+        string $method = 'POST',
+    ): StoreRequest {
+        /**
+         * @var StoreRequest
+         */
+        $instance = $this->mockRequest(
+            StoreRequest::class,
+            $uri,
+            $method,
+            $input
+        );
+
+        return $instance;
+    }
+
+    /**
+     * filterSystemFields: empty
      *
      * @see \Playground\Http\Requests\Concerns\StoreFilter::filterSystemFields()
      */
-    public function test_filterSystemFields_for_groups(): void
+    public function test_filterSystemFields_with_empty_input(): void
     {
-        $instance = new StoreRequest;
-
-        $this->assertSame([], $instance->filterSystemFields([]));
-
-        $expected = ['gids' => 1];
-        $this->assertSame($expected, $instance->filterSystemFields(['gids' => 1]));
+        $input = [];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame([], $input);
     }
 
     /**
@@ -35,35 +57,60 @@ class SystemFieldsTraitTest extends TestCase
      *
      * @see \Playground\Http\Requests\Concerns\StoreFilter::filterSystemFields()
      */
-    public function test_filterSystemFields_for_permissions(): void
+    public function test_filterSystemFields_for_groups(): void
     {
-        $instance = new StoreRequest;
+        $input = ['gids' => 1];
+        $instance = $this->getStoreRequest($input);
 
-        $this->assertSame([], $instance->filterSystemFields([]));
+        $instance->filterSystemFields($input);
+        $this->assertSame(['gids' => 1], $input);
+    }
 
-        $expected = [
+    /**
+     * filterSystemFields: po, pg, pw
+     *
+     * @see \Playground\Http\Requests\Concerns\StoreFilter::filterSystemFields()
+     */
+    public function test_filterSystemFields_for_valid_permissions(): void
+    {
+        $input = [
             'po' => 7,
             'pg' => 4,
             'pw' => 4,
         ];
-        $this->assertSame($expected, $instance->filterSystemFields([
+
+        $instance = $this->getStoreRequest($input);
+
+        $instance->filterSystemFields($input);
+
+        $this->assertSame([
             'po' => 7,
             'pg' => 4,
             'pw' => 4,
-        ]));
+        ], $input);
+    }
 
-        // Only the permission bits may be set.
-
-        $expected = [
-            'po' => 4,
-            'pg' => 4,
-            'pw' => 4,
-        ];
-        $this->assertSame($expected, $instance->filterSystemFields([
+    /**
+     * filterSystemFields: po, pg, pw
+     *
+     * @see \Playground\Http\Requests\Concerns\StoreFilter::filterSystemFields()
+     */
+    public function test_filterSystemFields_for_invalid_permissions(): void
+    {
+        $input = [
             'po' => 100,
             'pg' => 4,
             'pw' => 4,
-        ]));
+        ];
+        $instance = $this->getStoreRequest($input);
+
+        $instance->filterSystemFields($input);
+
+        $this->assertSame([
+            'po' => 4,
+            'pg' => 4,
+            'pw' => 4,
+        ], $input);
     }
 
     /**
@@ -73,16 +120,20 @@ class SystemFieldsTraitTest extends TestCase
      */
     public function test_filterSystemFields_for_rank(): void
     {
-        $instance = new StoreRequest;
+        $input = ['rank' => 0];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['rank' => 0], $input);
 
-        $expected = ['rank' => 0];
-        $this->assertSame($expected, $instance->filterSystemFields(['rank' => 0]));
+        $input = ['rank' => 1];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['rank' => 1], $input);
 
-        $expected = ['rank' => 1];
-        $this->assertSame($expected, $instance->filterSystemFields(['rank' => 1]));
-
-        $expected = ['rank' => -1];
-        $this->assertSame($expected, $instance->filterSystemFields(['rank' => -1]));
+        $input = ['rank' => -1];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['rank' => -1], $input);
     }
 
     /**
@@ -92,15 +143,19 @@ class SystemFieldsTraitTest extends TestCase
      */
     public function test_filterSystemFields_for_size(): void
     {
-        $instance = new StoreRequest;
+        $input = ['size' => 0];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['size' => 0], $input);
 
-        $expected = ['size' => 0];
-        $this->assertSame($expected, $instance->filterSystemFields(['size' => 0]));
+        $input = ['size' => 1];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['size' => 1], $input);
 
-        $expected = ['size' => 1];
-        $this->assertSame($expected, $instance->filterSystemFields(['size' => 1]));
-
-        $expected = ['size' => -1];
-        $this->assertSame($expected, $instance->filterSystemFields(['size' => -1]));
+        $input = ['size' => -1];
+        $instance = $this->getStoreRequest($input);
+        $instance->filterSystemFields($input);
+        $this->assertSame(['size' => -1], $input);
     }
 }

@@ -133,24 +133,27 @@ interface StoreFilter
      * Filter the status
      *
      * @param array<string, mixed> $input The status input.
-     * @return array<string, mixed>
      */
-    public function filterStatus(array $input = []): array;
+    public function filterStatus(array &$input): void;
 
-    // /**
-    //  * Filter common fields
-    //  *
-    //  * @param array $input The common fields: locale, icon, avatar, image
-    //  */
-    // public function filterCommonFields(array $input = []): void;
+    /**
+     * Filter common fields
+     *
+     * @param array<string, mixed> $input The common fields: avatar, byline, icon, image, locale, url
+     */
+    public function filterCommonFields(array &$input): void;
 
     /**
      * Filter system fields
      *
      * @param array<string, mixed> $input The system fields input.
-     * @return array<string, mixed>
      */
-    public function filterSystemFields(array $input = []): array;
+    public function filterSystemFields(array &$input): void;
+
+    /**
+     * Filter a URI.
+     */
+    public function filterUri(mixed $value): string;
 
     /**
      * Filter a UUID

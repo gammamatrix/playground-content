@@ -169,15 +169,15 @@ trait StoreFilter
      *
      * FILTER_FLAG_NO_ENCODE_QUOTES - do not encode quotes.
      *
-     * @param string $content The string to filter.
+     * @param mixed $content The string to filter.
      */
-    public function filterHtml(string $content): string
+    public function filterHtml(mixed $content): string
     {
-        $content = filter_var(
+        $content = is_string($content) ? filter_var(
             $content,
             FILTER_SANITIZE_STRING,
             FILTER_FLAG_NO_ENCODE_QUOTES
-        );
+        ) : '';
 
         return is_string($content) ? $content : '';
     }
@@ -306,57 +306,93 @@ trait StoreFilter
      * Filter the status
      *
      * @param array<string, mixed> $input The status input.
-     * @return array<string, mixed>
      */
-    public function filterStatus(array $input = []): array
+    public function filterStatus(array &$input): void
     {
-        if (! isset($input['status'])) {
-            return $input;
+        if ($this->exists('status') || ! isset($input['status'])) {
+            return;
         }
 
         if (is_numeric($input['status'])) {
             $input['status'] = (int) abs($input['status']);
-
-            return $input;
         }
 
+        // NOTE: Array status requires model bit status handling.
         if (is_array($input['status'])) {
             foreach ($input['status'] as $key => $value) {
                 $input['status'][$key] = (bool) $value;
             }
         }
-
-        return $input;
     }
 
-    // /**
-    //  * Filter common fields
-    //  *
-    //  * @param array $input The common fields: locale, icon, avatar, image
-    //  *
-    //  * @return integer|NULL
-    //  */
-    // public function filterCommonFields(array $input = [])
-    // {
-    //     $input['locale'] = isset($input['locale']) ? $this->filterHtml($input['locale']) : '';
-    //     $input['icon'] = isset($input['icon']) ? $this->filterHtml($input['icon']) : '';
-    //     $input['avatar'] = isset($input['avatar']) ? $this->filterHtml($input['avatar']) : '';
-    //     $input['image'] = isset($input['image']) ? $this->filterHtml($input['image']) : '';
+    /**
+     * Filter common fields
+     *
+     * @param array<string, mixed> $input The common fields: avatar, byline, icon, image, locale, url
+     */
+    public function filterCommonFields(array &$input): void
+    {
+        if ($this->exists('avatar')) {
+            $input['avatar'] = isset($input['avatar']) ? $this->filterHtml($input['avatar']) : '';
+        }
 
-    //     return $input;
-    // }
+        if ($this->exists('byline')) {
+            $input['byline'] = isset($input['byline']) ? $this->filterHtml($input['byline']) : '';
+        }
+
+        if ($this->exists('icon')) {
+            $input['icon'] = isset($input['icon']) ? $this->filterHtml($input['icon']) : '';
+        }
+
+        if ($this->exists('image')) {
+            $input['image'] = isset($input['image']) ? $this->filterHtml($input['image']) : '';
+        }
+
+        if ($this->exists('locale')) {
+            $input['locale'] = isset($input['locale']) ? $this->filterHtml($input['locale']) : '';
+        }
+
+        if ($this->exists('url')) {
+            $input['url'] = isset($input['url']) ? $this->filterUri($input['url']) : '';
+        }
+    }
+
+    /**
+     * Filter content fields
+     *
+     * @param array<string, mixed> $input The content fields: content, summary, description, introduction
+     */
+    public function filterContentFields(array &$input): void
+    {
+        if ($this->exists('content')) {
+            $input['content'] = isset($input['content']) ? $this->purify($input['content']) : '';
+        }
+
+        if ($this->exists('summary')) {
+            $input['summary'] = isset($input['summary']) ? $this->purify($input['summary']) : '';
+        }
+
+        if ($this->exists('description')) {
+            $input['description'] = isset($input['description']) ? $this->exorcise($input['description']) : '';
+        }
+
+        if ($this->exists('introduction')) {
+            $input['introduction'] = isset($input['introduction']) ? $this->exorcise($input['introduction']) : '';
+        }
+    }
 
     /**
      * Filter system fields
      *
      * @param array<string, mixed> $input The system fields input.
-     * @return array<string, mixed>
      */
-    public function filterSystemFields(array $input = []): array
+    public function filterSystemFields(array &$input): void
     {
-        // Filter system fields.
-        if (isset($input['gids']) && is_numeric($input['gids'])) {
-            $input['gids'] = (int) abs($input['gids']);
+        // Filter group fields.
+        if ($this->exists('gids')) {
+            if (isset($input['gids']) && is_numeric($input['gids'])) {
+                $input['gids'] = (int) abs($input['gids']);
+            }
         }
 
         /**
@@ -364,27 +400,48 @@ trait StoreFilter
          */
         $pBits = 4 + 2 + 1;
 
-        if (isset($input['po']) && is_numeric($input['po'])) {
-            $input['po'] = intval(abs($input['po'])) & $pBits;
+        if ($this->exists('po')) {
+            if (isset($input['po']) && is_numeric($input['po'])) {
+                $input['po'] = intval(abs($input['po'])) & $pBits;
+            }
         }
 
-        if (isset($input['pg']) && is_numeric($input['pg'])) {
-            $input['pg'] = intval(abs($input['pg'])) & $pBits;
+        if ($this->exists('pg')) {
+            if (isset($input['pg']) && is_numeric($input['pg'])) {
+                $input['pg'] = intval(abs($input['pg'])) & $pBits;
+            }
+        }
+        if ($this->exists('pw')) {
+            if (isset($input['pw']) && is_numeric($input['pw'])) {
+                $input['pw'] = intval(abs($input['pw'])) & $pBits;
+            }
         }
 
-        if (isset($input['pw']) && is_numeric($input['pw'])) {
-            $input['pw'] = intval(abs($input['pw'])) & $pBits;
+        if ($this->exists('rank')) {
+            if (isset($input['rank']) && is_numeric($input['rank'])) {
+                $input['rank'] = (int) $input['rank'];
+            }
         }
 
-        if (isset($input['rank']) && is_numeric($input['rank'])) {
-            $input['rank'] = (int) $input['rank'];
+        if ($this->exists('size')) {
+            if (isset($input['size']) && is_numeric($input['size'])) {
+                $input['size'] = (int) $input['size'];
+            }
+        }
+    }
+
+    /**
+     * Filter a URI.
+     */
+    public function filterUri(mixed $value): string
+    {
+        if (empty($value) || ! is_string($value)) {
+            return '';
         }
 
-        if (isset($input['size']) && is_numeric($input['size'])) {
-            $input['size'] = (int) $input['size'];
-        }
+        $value = filter_var($value, FILTER_SANITIZE_URL);
 
-        return $input;
+        return is_string($value) ? $value : '';
     }
 
     /**

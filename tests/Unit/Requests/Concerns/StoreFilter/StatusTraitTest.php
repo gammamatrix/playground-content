@@ -23,26 +23,39 @@ class StatusTraitTest extends TestCase
     {
         $instance = new StoreRequest;
 
-        $this->assertSame([], $instance->filterStatus([]));
+        $input = [];
 
-        $expected = ['status' => 1];
-        $this->assertSame($expected, $instance->filterStatus(['status' => 1]));
-        $this->assertSame($expected, $instance->filterStatus(['status' => '1']));
-        $this->assertSame($expected, $instance->filterStatus(['status' => '-1.0']));
+        $instance->filterStatus($input);
+        $this->assertSame([], $input);
 
-        $expected = [
-            'status' => [
-                'active' => true,
-                'lock' => true,
-                'public' => false,
-            ],
-        ];
-        $this->assertSame($expected, $instance->filterStatus([
+        $input = ['status' => 1];
+        $instance->filterStatus($input);
+        $this->assertSame(['status' => 1], $input);
+
+        $input = ['status' => '1'];
+        $instance->filterStatus($input);
+        $this->assertSame(['status' => 1], $input);
+
+        $input = ['status' => '-1.0'];
+        $instance->filterStatus($input);
+        $this->assertSame(['status' => 1], $input);
+
+        $input_map = [
             'status' => [
                 'active' => 1,
                 'lock' => true,
                 'public' => 0,
             ],
-        ]));
+        ];
+
+        $instance->filterStatus($input_map);
+
+        $this->assertSame([
+            'status' => [
+                'active' => true,
+                'lock' => true,
+                'public' => false,
+            ],
+        ], $input_map);
     }
 }
