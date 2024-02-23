@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='test_purify' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_purify' flowId='1']
 
-##teamcity[testFinished name='test_purify' duration='252' flowId='1']
+##teamcity[testFinished name='test_purify' duration='253' flowId='1']
 
 ##teamcity[testStarted name='test_exorcise' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_exorcise' flowId='1']
 
@@ -15,7 +15,7 @@
 
 ##teamcity[testStarted name='test_getHtmlPurifier' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_getHtmlPurifier' flowId='1']
 
-##teamcity[testFinished name='test_getHtmlPurifier' duration='4' flowId='1']
+##teamcity[testFinished name='test_getHtmlPurifier' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_getHtmlPurifier_with_iframes' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreContent/TraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreContent\TraitTest::test_getHtmlPurifier_with_iframes' flowId='1']
 
@@ -31,11 +31,11 @@
 
 ##teamcity[testStarted name='test_filterArray' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/ArrayTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ArrayTraitTest::test_filterArray' flowId='1']
 
-##teamcity[testFinished name='test_filterArray' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterArray' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_filterArray_to_json' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/ArrayTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ArrayTraitTest::test_filterArray_to_json' flowId='1']
 
-##teamcity[testFinished name='test_filterArray_to_json' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterArray_to_json' duration='5' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\ArrayTraitTest' flowId='1']
 
@@ -59,7 +59,7 @@
 
 ##teamcity[testStarted name='test_filterDateAsCarbon' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/DateTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\DateTraitTest::test_filterDateAsCarbon' flowId='1']
 
-##teamcity[testFinished name='test_filterDateAsCarbon' duration='5' flowId='1']
+##teamcity[testFinished name='test_filterDateAsCarbon' duration='4' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\DateTraitTest' flowId='1']
 
@@ -79,11 +79,11 @@
 
 ##teamcity[testStarted name='test_filterIntegerPositive' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/NumberTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTraitTest::test_filterIntegerPositive' flowId='1']
 
-##teamcity[testFinished name='test_filterIntegerPositive' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterIntegerPositive' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_filterPercent' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/NumberTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTraitTest::test_filterPercent' flowId='1']
 
-##teamcity[testFinished name='test_filterPercent' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterPercent' duration='5' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\NumberTraitTest' flowId='1']
 
@@ -99,7 +99,7 @@
 
 ##teamcity[testStarted name='test_filterStatus' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/StatusTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\StatusTraitTest::test_filterStatus' flowId='1']
 
-##teamcity[testFinished name='test_filterStatus' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterStatus' duration='5' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\StatusTraitTest' flowId='1']
 
@@ -107,11 +107,11 @@
 
 ##teamcity[testStarted name='test_filterSystemFields_with_empty_input' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/SystemFieldsTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTraitTest::test_filterSystemFields_with_empty_input' flowId='1']
 
-##teamcity[testFinished name='test_filterSystemFields_with_empty_input' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterSystemFields_with_empty_input' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_filterSystemFields_for_groups' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/SystemFieldsTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTraitTest::test_filterSystemFields_for_groups' flowId='1']
 
-##teamcity[testFinished name='test_filterSystemFields_for_groups' duration='4' flowId='1']
+##teamcity[testFinished name='test_filterSystemFields_for_groups' duration='5' flowId='1']
 
 ##teamcity[testStarted name='test_filterSystemFields_for_valid_permissions' locationHint='php_qn:///app/tests/Unit/Requests/Concerns/StoreFilter/SystemFieldsTraitTest.php::\Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTraitTest::test_filterSystemFields_for_valid_permissions' flowId='1']
 
@@ -163,7 +163,7 @@
 
 ##teamcity[testStarted name='test_command_about_displays_package_information_and_succeed_with_code_0' locationHint='php_qn:///app/tests/Feature/Console/Commands/About/CommandTest.php::\Tests\Feature\Playground\Http\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0' flowId='1']
 
-##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='105' flowId='1']
+##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='109' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Feature\Playground\Http\Console\Commands\About\CommandTest' flowId='1']
 
