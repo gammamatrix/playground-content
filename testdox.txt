@@ -27,8 +27,10 @@ Status Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\StatusTra
  [x] Filter status
 
 System Fields Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTrait)
+ [x] FilterSystemFields with empty input
  [x] FilterSystemFields for groups
- [x] FilterSystemFields for permissions
+ [x] FilterSystemFields for valid permissions
+ [x] FilterSystemFields for invalid permissions
  [x] FilterSystemFields for rank
  [x] FilterSystemFields for size
 

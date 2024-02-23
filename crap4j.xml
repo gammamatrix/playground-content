@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-18 00:05:13</timestamp>
+  <timestamp>2024-02-23 22:00:20</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>54</methodCount>
-    <crapMethodCount>5</crapMethodCount>
-    <crapLoad>78</crapLoad>
-    <totalCrap>1628</totalCrap>
-    <crapMethodPercent>9.26</crapMethodPercent>
+    <methodCount>57</methodCount>
+    <crapMethodCount>7</crapMethodCount>
+    <crapLoad>100</crapLoad>
+    <totalCrap>1928</totalCrap>
+    <crapMethodPercent>12.28</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -290,10 +290,10 @@
       <package>Playground\Http\Requests\Concerns</package>
       <className>Playground\Http\Requests\Concerns\StoreFilter</className>
       <methodName>filterHtml</methodName>
-      <methodSignature>filterHtml(string $content): string</methodSignature>
-      <fullMethod>filterHtml(string $content): string</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <methodSignature>filterHtml(mixed $content): string</methodSignature>
+      <fullMethod>filterHtml(mixed $content): string</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -356,22 +356,55 @@
       <package>Playground\Http\Requests\Concerns</package>
       <className>Playground\Http\Requests\Concerns\StoreFilter</className>
       <methodName>filterStatus</methodName>
-      <methodSignature>filterStatus(array $input): array</methodSignature>
-      <fullMethod>filterStatus(array $input): array</fullMethod>
-      <crap>5</crap>
-      <complexity>5</complexity>
+      <methodSignature>filterStatus(array $input): void</methodSignature>
+      <fullMethod>filterStatus(array $input): void</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
       <className>Playground\Http\Requests\Concerns\StoreFilter</className>
-      <methodName>filterSystemFields</methodName>
-      <methodSignature>filterSystemFields(array $input): array</methodSignature>
-      <fullMethod>filterSystemFields(array $input): array</fullMethod>
-      <crap>13</crap>
+      <methodName>filterCommonFields</methodName>
+      <methodSignature>filterCommonFields(array $input): void</methodSignature>
+      <fullMethod>filterCommonFields(array $input): void</fullMethod>
+      <crap>182</crap>
       <complexity>13</complexity>
+      <coverage>0</coverage>
+      <crapLoad>13</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterContentFields</methodName>
+      <methodSignature>filterContentFields(array $input): void</methodSignature>
+      <fullMethod>filterContentFields(array $input): void</fullMethod>
+      <crap>90</crap>
+      <complexity>9</complexity>
+      <coverage>0</coverage>
+      <crapLoad>9</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterSystemFields</methodName>
+      <methodSignature>filterSystemFields(array $input): void</methodSignature>
+      <fullMethod>filterSystemFields(array $input): void</fullMethod>
+      <crap>19</crap>
+      <complexity>19</complexity>
       <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Http\Requests\Concerns</package>
+      <className>Playground\Http\Requests\Concerns\StoreFilter</className>
+      <methodName>filterUri</methodName>
+      <methodSignature>filterUri(mixed $value): string</methodSignature>
+      <fullMethod>filterUri(mixed $value): string</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
