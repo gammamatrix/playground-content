@@ -309,18 +309,23 @@ trait StoreFilter
      */
     public function filterStatus(array &$input): void
     {
-        if ($this->exists('status') || ! isset($input['status'])) {
+        if (! $this->exists('status')) {
             return;
         }
 
-        if (is_numeric($input['status'])) {
-            $input['status'] = (int) abs($input['status']);
+        $status = $this->input('status');
+
+        if (is_numeric($status)) {
+            $input['status'] = (int) abs($status);
         }
 
         // NOTE: Array status requires model bit status handling.
-        if (is_array($input['status'])) {
-            foreach ($input['status'] as $key => $value) {
-                $input['status'][$key] = (bool) $value;
+        if (is_array($status)) {
+            $input['status'] = [];
+            foreach ($status as $key => $value) {
+                if ($key && is_string($key)) {
+                    $input['status'][$key] = ! empty($value);
+                }
             }
         }
     }
@@ -333,27 +338,35 @@ trait StoreFilter
     public function filterCommonFields(array &$input): void
     {
         if ($this->exists('avatar')) {
-            $input['avatar'] = isset($input['avatar']) ? $this->filterHtml($input['avatar']) : '';
+            $input['avatar'] = $this->filterHtml($this->input('avatar'));
         }
 
         if ($this->exists('byline')) {
-            $input['byline'] = isset($input['byline']) ? $this->filterHtml($input['byline']) : '';
+            $input['byline'] = $this->filterHtml($this->input('byline'));
         }
 
         if ($this->exists('icon')) {
-            $input['icon'] = isset($input['icon']) ? $this->filterHtml($input['icon']) : '';
+            $input['icon'] = $this->filterHtml($this->input('icon'));
         }
 
         if ($this->exists('image')) {
-            $input['image'] = isset($input['image']) ? $this->filterHtml($input['image']) : '';
+            $input['image'] = $this->filterHtml($this->input('image'));
+        }
+
+        if ($this->exists('label')) {
+            $input['title'] = $this->filterHtml($this->input('title'));
         }
 
         if ($this->exists('locale')) {
-            $input['locale'] = isset($input['locale']) ? $this->filterHtml($input['locale']) : '';
+            $input['locale'] = $this->filterHtml($this->input('locale'));
+        }
+
+        if ($this->exists('title')) {
+            $input['title'] = $this->filterHtml($this->input('title'));
         }
 
         if ($this->exists('url')) {
-            $input['url'] = isset($input['url']) ? $this->filterUri($input['url']) : '';
+            $input['url'] = $this->filterUri($this->input('url'));
         }
     }
 
@@ -365,19 +378,19 @@ trait StoreFilter
     public function filterContentFields(array &$input): void
     {
         if ($this->exists('content')) {
-            $input['content'] = isset($input['content']) ? $this->purify($input['content']) : '';
+            $input['content'] = $this->purify($this->input('content'));
         }
 
         if ($this->exists('summary')) {
-            $input['summary'] = isset($input['summary']) ? $this->purify($input['summary']) : '';
+            $input['summary'] = $this->purify($this->input('summary'));
         }
 
         if ($this->exists('description')) {
-            $input['description'] = isset($input['description']) ? $this->exorcise($input['description']) : '';
+            $input['description'] = $this->exorcise($this->input('description'));
         }
 
         if ($this->exists('introduction')) {
-            $input['introduction'] = isset($input['introduction']) ? $this->exorcise($input['introduction']) : '';
+            $input['introduction'] = $this->exorcise($this->input('introduction'));
         }
     }
 
@@ -390,8 +403,9 @@ trait StoreFilter
     {
         // Filter group fields.
         if ($this->exists('gids')) {
-            if (isset($input['gids']) && is_numeric($input['gids'])) {
-                $input['gids'] = (int) abs($input['gids']);
+            $gids = $this->input('gids');
+            if (isset($gids) && is_numeric($gids)) {
+                $input['gids'] = (int) abs($gids);
             }
         }
 
@@ -401,31 +415,36 @@ trait StoreFilter
         $pBits = 4 + 2 + 1;
 
         if ($this->exists('po')) {
-            if (isset($input['po']) && is_numeric($input['po'])) {
-                $input['po'] = intval(abs($input['po'])) & $pBits;
+            $po = $this->input('po');
+            if (isset($po) && is_numeric($po)) {
+                $input['po'] = intval(abs($po)) & $pBits;
             }
         }
 
         if ($this->exists('pg')) {
-            if (isset($input['pg']) && is_numeric($input['pg'])) {
-                $input['pg'] = intval(abs($input['pg'])) & $pBits;
+            $pg = $this->input('pg');
+            if (isset($pg) && is_numeric($pg)) {
+                $input['pg'] = intval(abs($pg)) & $pBits;
             }
         }
         if ($this->exists('pw')) {
-            if (isset($input['pw']) && is_numeric($input['pw'])) {
-                $input['pw'] = intval(abs($input['pw'])) & $pBits;
+            $pw = $this->input('pw');
+            if (isset($pw) && is_numeric($pw)) {
+                $input['pw'] = intval(abs($pw)) & $pBits;
             }
         }
 
         if ($this->exists('rank')) {
-            if (isset($input['rank']) && is_numeric($input['rank'])) {
-                $input['rank'] = (int) $input['rank'];
+            $rank = $this->input('rank');
+            if (isset($rank) && is_numeric($rank)) {
+                $input['rank'] = (int) $rank;
             }
         }
 
         if ($this->exists('size')) {
-            if (isset($input['size']) && is_numeric($input['size'])) {
-                $input['size'] = (int) $input['size'];
+            $size = $this->input('size');
+            if (isset($size) && is_numeric($size)) {
+                $input['size'] = (int) $size;
             }
         }
     }
