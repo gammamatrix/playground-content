@@ -24,7 +24,11 @@ Phone Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\PhoneTrait
  [x] Filter phone
 
 Status Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\StatusTrait)
- [x] Filter status
+ [x] FilterStatus with empty input
+ [x] FilterStatus with integer
+ [x] FilterStatus with integer as string
+ [x] FilterStatus with integer as negative float
+ [x] FilterStatus with map
 
 System Fields Trait (Tests\Unit\Playground\Http\Requests\Concerns\StoreFilter\SystemFieldsTrait)
  [x] FilterSystemFields with empty input

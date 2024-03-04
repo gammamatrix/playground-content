@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-04 01:29:57</timestamp>
+  <timestamp>2024-03-04 21:33:54</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>57</methodCount>
-    <crapMethodCount>7</crapMethodCount>
-    <crapLoad>100</crapLoad>
-    <totalCrap>1928</totalCrap>
-    <crapMethodPercent>12.28</crapMethodPercent>
+    <crapMethodCount>6</crapMethodCount>
+    <crapLoad>87</crapLoad>
+    <totalCrap>1777</totalCrap>
+    <crapMethodPercent>10.53</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -358,8 +358,8 @@
       <methodName>filterStatus</methodName>
       <methodSignature>filterStatus(array $input): void</methodSignature>
       <fullMethod>filterStatus(array $input): void</fullMethod>
-      <crap>6</crap>
-      <complexity>6</complexity>
+      <crap>7</crap>
+      <complexity>7</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -369,10 +369,10 @@
       <methodName>filterCommonFields</methodName>
       <methodSignature>filterCommonFields(array $input): void</methodSignature>
       <fullMethod>filterCommonFields(array $input): void</fullMethod>
-      <crap>182</crap>
-      <complexity>13</complexity>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>13</crapLoad>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
@@ -380,10 +380,10 @@
       <methodName>filterContentFields</methodName>
       <methodSignature>filterContentFields(array $input): void</methodSignature>
       <fullMethod>filterContentFields(array $input): void</fullMethod>
-      <crap>90</crap>
-      <complexity>9</complexity>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
-      <crapLoad>9</crapLoad>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Http\Requests\Concerns</package>
