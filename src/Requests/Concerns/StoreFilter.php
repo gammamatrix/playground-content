@@ -354,7 +354,7 @@ trait StoreFilter
         }
 
         if ($this->exists('label')) {
-            $input['title'] = $this->filterHtml($this->input('title'));
+            $input['label'] = $this->filterHtml($this->input('label'));
         }
 
         if ($this->exists('locale')) {
