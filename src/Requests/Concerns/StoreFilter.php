@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
  */
@@ -316,7 +318,7 @@ trait StoreFilter
         $status = $this->input('status');
 
         if (is_numeric($status)) {
-            $input['status'] = (int) abs($status);
+            $input['status'] = (int) abs(intval($status));
         }
 
         // NOTE: Array status requires model bit status handling.

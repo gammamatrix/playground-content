@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     'load' => [
         // 'commands' => (bool) env('PLAYGROUND_HTTP_LOAD_COMMANDS', true),

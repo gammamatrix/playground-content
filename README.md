@@ -4,9 +4,9 @@
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-http/testing/develop/coverage.svg)](tests)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-level%209-brightgreen)](.github/workflows/ci.yml#L120)
 
-The Playground Http package for [Laravel](https://laravel.com/docs/10.x) applications.
+The Playground Http package for [Laravel](https://laravel.com/docs/11.x) applications.
 
-More information is available [on the Playground Http wiki.](https://github.com/gammamatrix/playground-http/wiki)
+Read more on using Playground Http [at the Read the Docs for Playground.](https://gammamatrix-playground.readthedocs.io/)
 
 ## Installation
 
@@ -33,9 +33,6 @@ php artisan vendor:publish --provider="Playground\Http\ServiceProvider" --tag="p
 ```
 
 See the contents of the published config file: [config/playground-http.php](config/playground-http.php)
-
-### Environment Variables
-
 
 
 ## PHPStan
