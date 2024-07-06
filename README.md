@@ -34,6 +34,33 @@ php artisan vendor:publish --provider="Playground\Http\ServiceProvider" --tag="p
 
 See the contents of the published config file: [config/playground-http.php](config/playground-http.php)
 
+## Cloc
+
+```sh
+composer cloc
+```
+
+```
+➜  playground-http git:(develop) composer cloc
+> cloc --exclude-dir=output,vendor .
+      63 text files.
+      57 unique files.
+       7 files ignored.
+
+github.com/AlDanial/cloc v 1.98  T=0.09 s (657.2 files/s, 51299.5 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+PHP                             48            514           1124           2115
+YAML                             1              5              0            275
+XML                              3              0              7            219
+Markdown                         3             38              1             73
+JSON                             1              0              0             63
+INI                              1              3              0             12
+-------------------------------------------------------------------------------
+SUM:                            57            560           1132           2757
+-------------------------------------------------------------------------------
+```
 
 ## PHPStan
 

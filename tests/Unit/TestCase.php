@@ -1,13 +1,11 @@
 <?php
-
-declare(strict_types=1);
 /**
  * Playground
  */
+
+declare(strict_types=1);
 namespace Tests\Unit\Playground\Http;
 
-use Playground\Http\ServiceProvider;
-// use Playground\ServiceProvider as PlaygroundServiceProvider;
 use Playground\Test\OrchestraTestCase;
 
 /**
@@ -15,30 +13,5 @@ use Playground\Test\OrchestraTestCase;
  */
 class TestCase extends OrchestraTestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [
-            // PlaygroundServiceProvider::class,
-            ServiceProvider::class,
-        ];
-    }
-
-    /**
-     * Set up the environment.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     */
-    protected function getEnvironmentSetUp($app)
-    {
-        // dd(__METHOD__);
-        $app['config']->set('auth.providers.users.model', 'Playground\\Test\\Models\\User');
-        $app['config']->set('playground-auth.verify', 'user');
-        $app['config']->set('auth.testing.password', 'password');
-        $app['config']->set('auth.testing.hashed', false);
-
-        $app['config']->set('playground.date.sql', 'Y-m-d H:i:s');
-        // $app['config']->set('playground-http.redirect', true);
-        // $app['config']->set('playground-http.session', true);
-
-    }
+    use PackageProviders;
 }
