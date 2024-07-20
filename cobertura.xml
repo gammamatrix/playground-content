@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.37923728813559" branch-rate="0" lines-covered="179" lines-valid="472" branches-covered="0" branches-valid="0" complexity="258" version="0.4" timestamp="1720295188">
+<coverage line-rate="0.37659574468085" branch-rate="0" lines-covered="177" lines-valid="470" branches-covered="0" branches-valid="0" complexity="258" version="0.4" timestamp="1721437971">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -533,9 +533,9 @@
         </class>
       </classes>
     </package>
-    <package name="Requests/Concerns/StoreFilter.php" line-rate="0.81645569620253" branch-rate="0" complexity="98">
+    <package name="Requests/Concerns/StoreFilter.php" line-rate="0.81645569620253" branch-rate="0" complexity="99">
       <classes>
-        <class name="Playground\Http\Requests\Concerns\StoreFilter" filename="Requests/Concerns/StoreFilter.php" line-rate="0.81645569620253" branch-rate="0" complexity="98">
+        <class name="Playground\Http\Requests\Concerns\StoreFilter" filename="Requests/Concerns/StoreFilter.php" line-rate="0.81645569620253" branch-rate="0" complexity="99">
           <methods>
             <method name="filterArray" signature="mixed $value" line-rate="1" branch-rate="0" complexity="4">
               <lines>
@@ -555,7 +555,7 @@
                 <line number="57" hits="1"/>
               </lines>
             </method>
-            <method name="filterBits" signature="$value, $exponent" line-rate="1" branch-rate="0" complexity="2">
+            <method name="filterBits" signature="$value, $exponent" line-rate="1" branch-rate="0" complexity="3">
               <lines>
                 <line number="69" hits="2"/>
                 <line number="74" hits="2"/>
@@ -1264,9 +1264,9 @@
         </class>
       </classes>
     </package>
-    <package name="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="14">
+    <package name="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="13">
       <classes>
-        <class name="Playground\Http\ServiceProvider" filename="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="14">
+        <class name="Playground\Http\ServiceProvider" filename="ServiceProvider.php" line-rate="1" branch-rate="0" complexity="13">
           <methods>
             <method name="boot" signature="" line-rate="1" branch-rate="0" complexity="5">
               <lines>
@@ -1299,16 +1299,10 @@
                 <line number="70" hits="32"/>
                 <line number="71" hits="32"/>
                 <line number="73" hits="32"/>
-                <line number="75" hits="32"/>
+                <line number="74" hits="32"/>
                 <line number="76" hits="32"/>
+                <line number="77" hits="32"/>
                 <line number="78" hits="32"/>
-                <line number="79" hits="32"/>
-                <line number="80" hits="32"/>
-              </lines>
-            </method>
-            <method name="version" signature="" line-rate="1" branch-rate="0" complexity="1">
-              <lines>
-                <line number="85" hits="32"/>
               </lines>
             </method>
           </methods>
@@ -1334,12 +1328,10 @@
             <line number="70" hits="32"/>
             <line number="71" hits="32"/>
             <line number="73" hits="32"/>
-            <line number="75" hits="32"/>
+            <line number="74" hits="32"/>
             <line number="76" hits="32"/>
+            <line number="77" hits="32"/>
             <line number="78" hits="32"/>
-            <line number="79" hits="32"/>
-            <line number="80" hits="32"/>
-            <line number="85" hits="32"/>
           </lines>
         </class>
       </classes>

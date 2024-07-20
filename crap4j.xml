@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-07-06 19:46:28</timestamp>
+  <timestamp>2024-07-20 01:12:51</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>57</methodCount>
+    <methodCount>56</methodCount>
     <crapMethodCount>6</crapMethodCount>
     <crapLoad>87</crapLoad>
     <totalCrap>1777</totalCrap>
-    <crapMethodPercent>10.53</crapMethodPercent>
+    <crapMethodPercent>10.71</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -226,8 +226,8 @@
       <methodName>filterBits</methodName>
       <methodSignature>filterBits($value, $exponent): int</methodSignature>
       <fullMethod>filterBits($value, $exponent): int</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <crap>3</crap>
+      <complexity>3</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -624,17 +624,6 @@
       <fullMethod>about(): void</fullMethod>
       <crap>7</crap>
       <complexity>7</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>Playground\Http</package>
-      <className>Playground\Http\ServiceProvider</className>
-      <methodName>version</methodName>
-      <methodSignature>version(): string</methodSignature>
-      <fullMethod>version(): string</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
