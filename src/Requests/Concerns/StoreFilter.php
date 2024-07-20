@@ -66,7 +66,7 @@ trait StoreFilter
      */
     public function filterBits($value, $exponent = 0): int
     {
-        $exponent = intval(abs($exponent));
+        $exponent = is_scalar($exponent) ? intval(abs($exponent)) : 0;
 
         /**
          * @var int $pBits The summed bit power values.

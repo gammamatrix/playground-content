@@ -144,9 +144,9 @@ class IndexRequest extends FormRequest implements Contracts\PaginationColumns, C
     public function prepareForValidationPagination(): array
     {
         $page = $this->get('page');
-        $page = is_numeric($page) ? (int) abs($page) : null;
+        $page = is_numeric($page) ? (int) abs(intval($page)) : null;
         $perPage = $this->get('perPage');
-        $perPage = is_numeric($perPage) ? (int) abs($perPage) : $this->perPage;
+        $perPage = is_numeric($perPage) ? (int) abs(intval($perPage)) : $this->perPage;
         $perPage = $perPage > $this->perPageMax ? $this->perPageMax : $perPage;
 
         $this->merge([
