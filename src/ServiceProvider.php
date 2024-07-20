@@ -70,18 +70,11 @@ class ServiceProvider extends AuthServiceProvider
         $load = ! empty($config['load']) && is_array($config['load']) ? $config['load'] : [];
         $purifier = ! empty($config['purifier']) && is_array($config['purifier']) ? $config['purifier'] : [];
 
-        $version = $this->version();
-
         AboutCommand::add('Playground: Http', fn () => [
             '<fg=yellow;options=bold>Load</> Translations' => ! empty($load['translations']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
 
             'Package' => $this->package,
-            'Version' => $version,
+            'Version' => ServiceProvider::VERSION,
         ]);
-    }
-
-    public function version(): string
-    {
-        return static::VERSION;
     }
 }
